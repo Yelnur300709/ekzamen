@@ -1,0 +1,127 @@
+/* Общие стили */
+body {
+    margin: 0;
+    background-color: #5A7A64;
+    color: white;
+}
+
+/* Шапка */
+.header {
+    background-color: #222;
+    padding: 15px;
+    text-align: center;
+}
+
+.header img {
+    font-size: 40px;
+    margin: 0;
+    color: #fff;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #111;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: limegreen;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.menu a:hover {
+    background-color: #A0C882;
+    color: white;
+}
+
+/* Подвал */
+.footer {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Секция с изображениями */
+.image-section {
+    text-align: center;
+    position: relative; /* Добавлено для анимации */
+    overflow: hidden;
+    height: 200px; /* Установите высоту для контейнера */
+}
+
+/* Анимация движения и поворота */
+.image-section img {
+    position: absolute;
+    top: 0;
+    left: -100%; /* Начальная позиция за пределами экрана слева */
+    width: 200px; /* Установите ширину изображения */
+    transition: transform 1s ease-in-out;
+    animation: moveAndRotate 6s infinite linear;
+}
+
+@keyframes moveAndRotate {
+    0% {
+        left: -100%;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: 100%;
+        transform: rotate(180deg);
+    }
+    100% {
+        left: -100%;
+        transform: rotate(360deg); /* Поворот возвращается в начальное положение */
+    }
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .header img {
+        max-width: 100%;
+    }
+
+    .menu a {
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+}
+
+.image img{
+    width: 100%;
+}

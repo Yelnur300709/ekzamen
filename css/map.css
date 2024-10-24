@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #A0C882;
+}
+
+header {
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 50px;
+}
+
+.main {
+    background-color: #A0C882;
+    text-align: center;
+    padding: 50px; /* Уменьшено для мобильных устройств */
+    height: auto;  /* Заменено на auto для автоматической высоты */
+}
+
+.image-coiner {
+    display: flex; 
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Позволяет изображениям переходить на новую строку при малой ширине */
+}
+
+.image-container img {
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    width: 100%; /* Полная ширина контейнера */
+    max-width: 500px; /* Максимальная ширина 500px */
+    border: 2px solid #000;
+}
+
+.back {
+    color: red;
+    text-decoration: none;
+    margin-left: 12px;
+    position: absolute;
+    right: 10px;
+}
+
+/* Медиазапросы для мобильных устройств */
+@media (max-width: 768px) {
+    .main {
+        padding: 20px; /* Уменьшено для мобильных устройств */
+    }
+
+    header {
+        height: 40px; /* Меньшая высота для мобильных устройств */
+    }
+
+    .image-coiner {
+        gap: 10px; /* Меньший отступ между изображениями */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Полная ширина на мобильных устройствах */
+    }
+}

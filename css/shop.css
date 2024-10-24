@@ -1,0 +1,155 @@
+
+body {
+    margin: 0;
+    background-color: #5A7A64;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+.shop-header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.shop-header h1 {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.shop-header .home-link {
+    color: limegreen;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.shop-header .home-link:hover {
+    color: white;
+}
+
+.shop-body {
+    display: flex;
+}
+
+
+.shop-sidebar {
+    width: 200px;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+.shop-sidebar h2 {
+    color: limegreen;
+}
+
+.shop-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.shop-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.shop-sidebar ul li a {
+    text-decoration: none;
+    color: #A0C882;
+    transition: color 0.3s ease;
+}
+
+.shop-sidebar ul li a:hover {
+    color: #5A7A64;
+}
+
+
+.shop-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.item {
+    background-color: #555;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+    height: 250px;
+}
+
+.item img {
+    width: fit-content;
+    height: 200px;
+}
+
+.item:hover,
+.item:active {
+    transform: scale(1.1);
+    background-color: #666;
+}
+
+
+@media (max-width: 768px) {
+
+    .shop-body {
+        flex-direction: column;
+    }
+
+
+    .shop-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 0;
+    }
+
+    .shop-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .shop-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .shop-header h1 {
+        position: static;
+        transform: none;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .shop-items {
+        grid-template-columns: 1fr;
+    }
+
+    
+    .shop-sidebar {
+        padding: 10px;
+    }
+
+    
+    .item {
+        padding: 10px;
+        height: auto;
+    }
+
+    .item img {
+        height: auto;
+        width: 100%;
+    }
+}
